@@ -8,5 +8,6 @@ run:
 	bazel run  src_cpp:data_owner_test
 	bazel run  src_cpp:operation_test
 	bazel run  src_cpp:wrapper_test
-
+proto:
+	bazel run //cpp:protocol_a_test
 .PHONY: build
