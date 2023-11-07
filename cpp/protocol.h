@@ -1,16 +1,23 @@
-
+#ifndef PROTOCOL_H
+#define PROTOCOL_H
+#include "src_cpp/NumberArr.h"
 #include <iostream>
-#define EMPTY_FUNCTION(ret)                      \
-  {                                              \
-    std::cout << "this function is not defined"; \
-    return ret;                                  \
+#include <glog/logging.h>
+
+#define EMPTY_FUNCTION(ret)     \
+  {                             \
+    LOG(ERROR) << "函数未定义"; \
+    return ret;                 \
   }
 class Protocol {
  public:
-  explicit Protocol(){};
-  ~Protocol(){};
+  Protocol();
+  virtual ~Protocol() = 0;
 
   template <typename T>
-  bool add(const int length, T *result, const T *left, const T *right)
+  bool add(const NumberArr<T>* left, const NumberArr<T>* right, NumberArr<T>* result)
       EMPTY_FUNCTION(true);  // 模版函数不能声明为虚函数
 };
+// Protocol::~Protocol() { LOG(WARNING) << "调用 Protocol 析构函数"; }
+// Protocol::~Protocol() {}
+#endif  // A_H

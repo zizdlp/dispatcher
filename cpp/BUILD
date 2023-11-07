@@ -6,12 +6,14 @@ load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
 cc_library(
     name = "protocol",
     srcs = [ 
+      "protocol.cc",
     ],
     hdrs=[
       "protocol.h",
     ],
     deps = [
       "//src_cpp:number_arr",
+      "@com_github_google_glog//:glog",
     ],
 )
 cc_library(

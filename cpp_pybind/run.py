@@ -3,7 +3,7 @@ from cpp_pybind.protocol import ProtocolWrapper
 
 
 def testLargeDataWrapper():
-    dataWrapper = ProtocolWrapper()
+    dataWrapper = ProtocolWrapper("ProtocolA")
     length = 10
     dataWrapper.createData(length, "left")
     dataWrapper.createData(length, "right")

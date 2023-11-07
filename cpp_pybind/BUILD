@@ -14,6 +14,7 @@ pybind_extension(
         "//src_cpp:data_owner",
         "//src_cpp:operation",
         "//cpp:protocol_a",
+        "//cpp:protocol_b",
         ],
 )
 
