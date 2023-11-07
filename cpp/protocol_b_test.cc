@@ -23,5 +23,11 @@ int main() {
   protocolB.add(arr1, arr2, arr3);
   arr3->print_value();
 
+  Protocol* aptr = new ProtocolA();
+  arr1->set_value(3);
+  arr2->set_value(2);
+  arr3->set_value(9);
+  aptr->add(arr1, arr2, arr3);
+  arr3->print_value();
   return 0;
 }

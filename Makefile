@@ -14,4 +14,6 @@ run:
 proto: 
 	bazel run //cpp:protocol_a_test
 	# bazel run //cpp:protocol_b_test
+pybind:
+	bazel run //cpp_pybind:run
 .PHONY: build

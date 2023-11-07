@@ -18,6 +18,4 @@ class Protocol {
   bool add(const NumberArr<T>* left, const NumberArr<T>* right, NumberArr<T>* result)
       EMPTY_FUNCTION(true);  // 模版函数不能声明为虚函数
 };
-// Protocol::~Protocol() { LOG(WARNING) << "调用 Protocol 析构函数"; }
-// Protocol::~Protocol() {}
 #endif  // A_H

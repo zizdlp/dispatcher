@@ -9,7 +9,7 @@ def testLargeDataWrapper():
     dataWrapper.createData(length, "right")
     dataWrapper.createData(length, "res")
     dataWrapper.setValue(3, "left")
-    dataWrapper.setValue(7, "right")
+    dataWrapper.setValue(22, "right")
     loop = 1
     start_time = time.time()
     for i in range(loop):

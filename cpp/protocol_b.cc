@@ -17,4 +17,4 @@ template bool ProtocolB::add<int>(const NumberArr<int>* left,
                                   const NumberArr<int>* right,
                                   NumberArr<int>* result);  // 明显实例化函数模版
 
-ProtocolB::~ProtocolB() { std::cout << "call ProtocolB::~ProtocolB" << std::endl; }
+ProtocolB::~ProtocolB() { LOG(WARNING) << "调用 ProtocolB 析构函数"; }
