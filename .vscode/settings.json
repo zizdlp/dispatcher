@@ -142,7 +142,6 @@
         "compare": "cpp"
     },
     "PointerAlignment": "right",
-    "workbench.activityBar.visible": true,
     "diffEditor.renderSideBySide": false,
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "python.formatting.provider": "none",

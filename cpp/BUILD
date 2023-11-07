@@ -24,6 +24,7 @@ cc_library(
     ],
     deps = [
       "//cpp:protocol",
+      "//src_cpp:number_arr",
     ],
 )
 cc_binary(
@@ -33,5 +34,26 @@ cc_binary(
     ],
     deps = [
         "//cpp:protocol_a",
+    ],
+)
+cc_library(
+    name = "protocol_b",
+    srcs = [ 
+      "protocol_b.cc",
+    ],
+    hdrs=[
+      "protocol_b.h",
+    ],
+    deps = [
+      "//cpp:protocol",
+    ],
+)
+cc_binary(
+    name = "protocol_b_test",
+    srcs = [
+        "protocol_b_test.cc",
+    ],
+    deps = [
+        "//cpp:protocol_b",
     ],
 )

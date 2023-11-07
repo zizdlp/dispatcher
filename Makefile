@@ -10,4 +10,5 @@ run:
 	bazel run  src_cpp:wrapper_test
 proto:
 	bazel run //cpp:protocol_a_test
+	# bazel run //cpp:protocol_b_test
 .PHONY: build

@@ -6,31 +6,28 @@
 #include <iostream>
 namespace py = pybind11;
 
-
 struct DataWrapper {
-  public:
-    DataWrapper(){ std::cout<<"create Datawrapper";}
-    void createData(int length,std::string name){
-      dataOwner.create_array(length,name);
-    }
-    void setValue(int value,std::string name){
-      auto left =dataOwner.get_array(name);
-      left->set_value(value);
-    }
-    void mul_operation(std::string name_left,std::string name_right,std::string name_res){
-      auto left =dataOwner.get_array(name_left);
-      auto right =dataOwner.get_array(name_right);
-      auto res =dataOwner.get_array(name_res);
-      mul(left,right,res);
-    }
-    void print_value(std::string name){
-      auto left =dataOwner.get_array(name);
-      left->print_value();
-    }
-  private:
-    DataOwner<int> dataOwner;
-};
+ public:
+  DataWrapper() { std::cout << "create Datawrapper"; }
+  void createData(int length, std::string name) { dataOwner.create_array(length, name); }
+  void setValue(int value, std::string name) {
+    auto left = dataOwner.get_array(name);
+    left->set_value(value);
+  }
+  void mul_operation(std::string name_left, std::string name_right, std::string name_res) {
+    auto left = dataOwner.get_array(name_left);
+    auto right = dataOwner.get_array(name_right);
+    auto res = dataOwner.get_array(name_res);
+    mul(left, right, res);
+  }
+  void print_value(std::string name) {
+    auto left = dataOwner.get_array(name);
+    left->print_value();
+  }
 
+ private:
+  DataOwner<int> dataOwner;
+};
 
 struct UCharP {
   unsigned char *value;
